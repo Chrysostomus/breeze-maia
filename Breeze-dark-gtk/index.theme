@@ -1,0 +1,10 @@
+[X-GNOME-Metatheme]
+Name=Breeze-Maia-Dark
+Type=X-GNOME-Metatheme
+Comment=Breeze gtk-theme modified for Manjaro
+Encoding=UTF-8
+GtkTheme=Breeze-Maia-Dark
+MetacityTheme=Breeze
+IconTheme=Breeze-Maia-Dark
+CursorTheme=Breeze
+CursorSize=24
