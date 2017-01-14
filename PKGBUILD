@@ -7,10 +7,13 @@ pkgdesc="Breeze theme with maia colors, gtk3-only version"
 arch=('any')
 url="https://www.gnome.org/"
 license=('LGPL')
-source=("https://rawgit.com/Chrysostomus/breeze-maia/master/chrome.tar.gz")
+source=("git://github.com/Chrysostomus/breeze-maia.git")
 sha256sums=('SKIP')
-options=('!strip')
+makedepends=('git')
 
 package() {
-	find Breeze* -type f -exec install -Dm644 '{}' "$pkgdir/usr/share/themes/{}"
+	cd "$srcdir"
+	install -dm655 "$pkgdir/usr/share/themes/"
+	cp -r "$srcdir/breeze-maia/Breeze-Maia" "$pkgdir/usr/share/themes/"
+	cp -r "$srcdir/breeze-maia/Breeze-Maia-Dark" "$pkgdir/usr/share/themes/"
 }
